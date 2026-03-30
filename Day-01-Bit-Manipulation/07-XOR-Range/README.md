@@ -83,5 +83,3 @@ An optimized approach uses properties of XOR:
 
 * LeetCode (similar problems)
 * Bit Manipulation concepts
-
----
