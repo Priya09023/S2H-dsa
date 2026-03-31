@@ -84,6 +84,3 @@ queries = [[0,1], [1,2], [0,3], [3,3]]
 * Prefix XOR
 * Arrays
 * Range Queries
-  
-
----
