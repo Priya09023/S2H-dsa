@@ -66,4 +66,4 @@ Odd
 
 Checking whether a number is odd or even can be done instantly using a simple bitwise operation, making it both efficient and elegant.
 
----
+
