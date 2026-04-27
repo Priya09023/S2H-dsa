@@ -1,6 +1,6 @@
 ## Check if a Number is Odd or Even
 
-## Description
+### Description
 In this program, I checked whether a given number is odd or even by using bitwise AND operator. Normally we use modulo operator, but bitwise method is faster.
 
 ### Concept
