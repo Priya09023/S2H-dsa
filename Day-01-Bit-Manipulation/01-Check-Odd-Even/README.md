@@ -1,69 +1,16 @@
-# 🧠 Check if a Number is Odd or Even (Bit Manipulation)
+## Checking Odd or Even using Bitwise Operator
 
-## 📌 Problem Description
+In this program, I used bitwise AND operator to find whether a given number is odd or even. We usually use modulo operator (`%`) to check this, but here I used bitwise operator because it is a simple and faster method.
 
-In high-performance systems like embedded applications, arithmetic operations such as division (`/`) and modulo (`%`) can be relatively slow.
+The concept behind this is based on binary numbers. In computer, every number is stored in binary format using 0s and 1s. To know whether a number is odd or even, we only need to check the last bit of that binary number.
 
-To improve efficiency, determine whether a given number is **Odd or Even using bitwise operations only**.
+If the last bit is 0, the number is Even.  
+If the last bit is 1, the number is Odd.
 
+For this checking, I used `num & 1`. Here `&` is bitwise AND operator. It compares the number with 1 and checks only the last bit.
 
+For example, if the number is 7, its binary value is 111. The last bit is 1, so it is an Odd number.
 
-## 💡 Core Idea
+If the number is 8, its binary value is 1000. The last bit is 0, so it is an Even number.
 
-Every number in a computer is stored in **binary format**.
-
-* If the **last bit (Least Significant Bit - LSB)** is `0` → the number is **Even**
-* If the **last bit (LSB)** is `1` → the number is **Odd**
-
-
-
-## ⚙️ Approach
-
-* Use the **bitwise AND (`&`) operator** with `1`
-* This operation checks only the **last bit** of the number
-
-### 👉 Result:
-
-* `num & 1 = 0` → **Even**
-* `num & 1 = 1` → **Odd**
-
-
-
-## 🧪 Example
-
-**Input:**
-7
-
-**Binary Representation:**
-111
-
-**Explanation:**
-
-* The last bit is `1`
-* Therefore, the number is **Odd**
-
-**Output:**
-Odd
-
-
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(1) (constant time)
-* **Space Complexity:** O(1)
-
-
-
-## 🚀 Why Use Bit Manipulation?
-
-* Faster than traditional arithmetic operations
-* Efficient for low-level and performance-critical systems
-* Commonly used in coding interviews and system design
-
-
-
-## 🎯 Key Takeaway
-
-Checking whether a number is odd or even can be done instantly using a simple bitwise operation, making it both efficient and elegant.
-
-
+By using bitwise operator, we can find odd or even in an easy way. This method is also efficient because bitwise operations are faster compared to normal arithmetic operations.
