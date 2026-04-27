@@ -1,16 +1,47 @@
-## Checking Odd or Even using Bitwise Operator
+# Check if a Number is Odd or Even
 
-In this program, I used bitwise AND operator to find whether a given number is odd or even. We usually use modulo operator (`%`) to check this, but here I used bitwise operator because it is a simple and faster method.
+## Description
+This program checks whether a given number is Odd or Even using bitwise operation. Instead of using modulo (`%`) or division (`/`), bitwise AND operator is used because it is faster and more efficient.
 
-The concept behind this is based on binary numbers. In computer, every number is stored in binary format using 0s and 1s. To know whether a number is odd or even, we only need to check the last bit of that binary number.
+## Concept
+Every number in computer is stored in binary format. To find whether a number is odd or even, we only need to check the last bit (Least Significant Bit).
 
-If the last bit is 0, the number is Even.  
-If the last bit is 1, the number is Odd.
+- If the last bit is `0`, the number is Even.
+- If the last bit is `1`, the number is Odd.
 
-For this checking, I used `num & 1`. Here `&` is bitwise AND operator. It compares the number with 1 and checks only the last bit.
+For checking this, the program uses:
 
-For example, if the number is 7, its binary value is 111. The last bit is 1, so it is an Odd number.
+`num & 1`
 
-If the number is 8, its binary value is 1000. The last bit is 0, so it is an Even number.
+Here, `1` in binary is `0001`, so the AND operation checks only the last bit of the given number.
 
-By using bitwise operator, we can find odd or even in an easy way. This method is also efficient because bitwise operations are faster compared to normal arithmetic operations.
+## Program Explanation
+The program takes a number as input and performs bitwise AND operation with `1`.
+
+If the result is:
+- `0` → Even Number
+- `1` → Odd Number
+
+For example, if the input is `7`, its binary representation is `111`.
+
+111  
+001  
+
+001  
+
+The result is `1`, so the number is **Odd**.
+
+## Input
+7
+
+## Output
+Odd
+
+## Advantages
+- Faster execution
+- Efficient compared to arithmetic operations
+- Useful in embedded systems and low-level programming
+  
+
+## Conclusion
+By using bitwise operation, odd or even can be checked in a simple and efficient way without using arithmetic operators.
