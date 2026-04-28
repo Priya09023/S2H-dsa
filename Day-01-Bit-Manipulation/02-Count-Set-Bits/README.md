@@ -1,49 +1,22 @@
-🧠 Count the Number of Set Bits
-📌 Problem Description
+## Count the Number of Set Bits
 
-You are working on a system that stores user permissions using binary numbers.
+### Description
+In this program, I counted the number of set bits in a given number by using bitwise operations. A set bit means the bit value is 1 in the binary representation of a number.
 
-Each bit in the binary representation indicates:
+### Concept
+Every number in computer is stored in binary form. By checking each bit, we can find how many 1s are present in that number.
 
-1 → Permission enabled
-0 → Permission disabled
+For example, decimal number 7 in binary is 111. Since there are three 1s, the number of set bits is 3.
 
-👉 Your task is to count how many permissions are active (number of 1s) in a given number.
+### Program Explanation
+The program takes a number as input and checks each bit one by one.
 
-💡 Core Idea
+If the current bit is 1, the count is increased. Then the number is shifted to the right to check the next bit. This process continues until the number becomes 0.
 
-A number in decimal can be represented in binary form.
+By repeating this, the program counts all set bits present in the number.
 
-Example:
-13 → 1101 (binary)
-Number of 1s = 3
-
-👉 So, the answer is 3 active permissions
-
-⚙️ Approach (Efficient Method)
-
-We use an optimized technique called Brian Kernighan’s Algorithm.
-
-🔥 Key Concept:
-Each operation removes the rightmost set bit (1)
-Repeat until the number becomes 0
-Count how many times this happens
-🧪 Example
-Input
-7
-Binary Representation
-111
-Explanation
-There are three 1s
-So, total active permissions = 3
-Output
+### Output
 3
-⏱️ Complexity
-Time Complexity: O(number of set bits)
-Space Complexity: O(1)
-🚀 Why This Approach?
 
-✔ Faster than checking every bit
-✔ Reduces unnecessary operations
-✔ Commonly asked in coding interviews
-✔ Useful in low-level and system programming
+### Conclusion
+Counting set bits is useful in programming because it is used in binary operations, permissions, flags, and many bit manipulation problems.
