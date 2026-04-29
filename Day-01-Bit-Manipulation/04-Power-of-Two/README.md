@@ -1,60 +1,38 @@
-# 04. Power of Two
+## Check if a Number is Power of 2 or Not
 
-## 🔗 Problem Link
+### Description
+In this program, I checked whether a given number is power of 2 or not by using bitwise operation.
 
+###  Problem Link
 https://leetcode.com/problems/power-of-two/
 
-## 📌 Problem Statement
+### Concept
+Power of 2 numbers have only one set bit in binary form.
 
-Given an integer `n`, return `true` if it is a power of two. Otherwise, return `false`.
+For example:
 
-An integer `n` is a power of two if there exists an integer `x` such that:
+- 2 = 10
+- 4 = 100
+- 8 = 1000
+- 16 = 10000
 
-```
-n = 2^x
-```
+In these numbers, only one bit is 1 and remaining bits are 0.
 
----
+For checking this, I used `n & (n - 1)`.
 
-## 🧾 Example
+### Program Explanation
+The program takes a number as input and first checks whether it is greater than 0.
 
-```
-Input: n = 16
-Output: true
+Then bitwise AND operation is performed between `n` and `n - 1`.
 
-Explanation:
-16 = 2^4
-```
+If the result is 0, it means only one set bit is present, so it is a power of 2.
 
----
+If the result is not 0, it means more than one set bit is present, so it is not a power of 2.
 
-## 💡 Approach (Bit Manipulation)
+For example, if input is 16, binary form is 10000. It has only one set bit, so the output is True.
 
-* A power of two has **only one set bit (1)** in its binary representation.
-* Using the expression:
+### Output
+True
 
-```
-n & (n - 1)
-```
-
-* This removes the lowest set bit.
-* If the result is `0`, then `n` has only one set bit → it is a power of two.
-
-## ⚙️ Algorithm
-
-1. Check if `n > 0`
-2. Check if `(n & (n - 1)) == 0`
-3. If both conditions are true → return `true`
-4. Else → return `false`
-
-## ⏱️ Complexity
-
-* Time Complexity: `O(1)`
-* Space Complexity: `O(1)`
-
-
-## 🏷️ Tags
-
-* Bit Manipulation
-* Mathematics
-* Interview Preparation
+### Conclusion
+By using bitwise operation, we can easily find whether a number is power of 2 or not.n
