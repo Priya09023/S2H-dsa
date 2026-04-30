@@ -1,60 +1,46 @@
-# 05. Minimum Bit Flips to Convert Number
+## Count Number of Bits to be Flipped to Convert A to B
 
-## 🔗 Problem Link
-
+###  Problem Link
 https://leetcode.com/problems/minimum-bit-flips-to-convert-number/
 
-## 📌 Problem Statement
+### Description
+In this program, I found how many bits need to be changed to convert one number into another number.
 
-Given two integers `start` and `goal`, return the minimum number of bit flips required to convert `start` into `goal`.
+### Concept
+To solve this problem, I used XOR operation.
 
-A bit flip means changing a bit from `0` to `1` or from `1` to `0`.
+When two bits are different, XOR gives 1.  
+When two bits are same, XOR gives 0.
 
-## 🧾 Example
+So, by doing `start ^ goal`, we can know which bits are different. Then we count how many 1s are present. That count is the number of bit flips needed.
 
-```
-Input: start = 10, goal = 7
-Output: 3
-```
+### Program Explanation
+The program takes two numbers as input.
 
-### Explanation
+First, XOR operation is performed between start and goal. This gives a new number where different bits become 1.
 
-Binary representation:
+Then the program checks each bit one by one.
 
-* 10 → 1010
-* 7  → 0111
+If the bit is 1, count is increased. After that, the number is shifted right to check the next bit.
 
-Steps:
+This process continues until all bits are checked.
 
-* 1010 → 1011
-* 1011 → 1111
-* 1111 → 0111
+For example, start = 10 and goal = 7.
 
-Total flips = 3
+10 = 1010  
+7 = 0111  
 
+After XOR:
 
-## 💡 Approach (Bit Manipulation)
+1010  
+0111  
+----  
+1101  
 
-* Use XOR (`^`) to find differing bits between `start` and `goal`
-* XOR gives `1` where bits are different
-* Count number of set bits (1s) in the result
+Here, there are three 1s, so 3 bit flips are needed.
 
-## ⚙️ Algorithm
+### Output
+3
 
-1. Compute `num = start ^ goal`
-2. Initialize `count = 0`
-3. Loop through all bits (0 to 31):
-
-   * Add `(num & 1)` to count
-   * Right shift `num` by 1
-4. Return `count`
-
-## ⏱️ Complexity
-
-* Time Complexity: `O(1)`
-* Space Complexity: `O(1)`
-
-## 🏷️ Tags
-
-* Bit Manipulation
-* XOR
+### Conclusion
+By using XOR operation, we can easily find the minimum number of bit changes needed to convert one number into another.
