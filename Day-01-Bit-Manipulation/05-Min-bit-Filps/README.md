@@ -34,7 +34,7 @@ After XOR:
 
 1010  
 0111  
-----  
+--  
 1101  
 
 Here, there are three 1s, so 3 bit flips are needed.
