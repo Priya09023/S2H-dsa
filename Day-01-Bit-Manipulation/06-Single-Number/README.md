@@ -3,7 +3,7 @@
 ### Description
 In this program, I found the number that appears only one time in the array, while all other numbers appear twice.
 
-Practice Link
+### Practice Link
 https://leetcode.com/problems/single-number/
 
 ### Concept
