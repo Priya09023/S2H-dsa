@@ -1,71 +1,46 @@
-# 06. Single Number
+## Find the Number that Appears Odd Number of Times
 
-## 🧩 Problem Statement
+### Description
+In this program, I found the number that appears only one time in the array, while all other numbers appear twice.
 
-Given an integer array `nums`, every element appears exactly twice except for one element.
-Your task is to find the element that appears only once.
-
-🔗 Practice Link
-
+Practice Link
 https://leetcode.com/problems/single-number/
 
-## 📌 Example
+### Concept
+To solve this problem, I used XOR operation.
 
-**Input:**
+The main property of XOR is:
 
-```
-nums = [4, 1, 2, 1, 2]
-```
+- Same numbers give 0 → `a ^ a = 0`
+- Any number XOR with 0 gives the same number → `a ^ 0 = a`
 
-**Output:**
+Because of this, numbers that appear twice cancel each other, and the number that appears one time remains.
 
-```
+### Program Explanation
+The program takes all elements in the array and performs XOR operation on each element.
+
+At first, XOR value is 0.
+
+Then each number is XORed one by one.
+
+Duplicate numbers become 0 and get cancelled.
+
+At the end, the number that appears only once will remain in XOR.
+
+For example, array = [4,1,2,1,2]
+
+Step by step:
+
+0 ^ 4 = 4  
+4 ^ 1 = 5  
+5 ^ 2 = 7  
+7 ^ 1 = 6  
+6 ^ 2 = 4  
+
+Final answer is 4.
+
+### Output
 4
-```
 
----
-
-## 💡 Approach
-
-This problem can be efficiently solved using **Bit Manipulation (XOR)**.
-
-### Key Properties of XOR:
-
-* `a ^ a = 0` (same numbers cancel each other)
-* `a ^ 0 = a` (number remains unchanged)
-
-### Idea:
-
-When we apply XOR to all elements in the array:
-
-* Duplicate elements cancel out
-* Only the unique element remains
-
-## ⚙️ Algorithm
-
-1. Initialize a variable `result = 0`
-2. Traverse through each element in the array
-3. Perform XOR operation with the current element
-4. After the loop, `result` will contain the single number
-
-## ⏱️ Complexity Analysis
-
-* **Time Complexity:** O(n)
-  (We traverse the array once)
-
-* **Space Complexity:** O(1)
-  (No extra space is used)
-
-## 🚀 Key Points
-
-* Uses efficient bit manipulation technique
-* No need for extra data structures
-* Works in a single pass
-* Common interview problem
-
-## 🏷️ Tags
-
-* Bit Manipulation
-* Arrays
-* XOR
-* Interview Questions
+### Conclusion
+By using XOR operation, we can find the single number in a simple and efficient way without using extra space.
