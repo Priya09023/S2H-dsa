@@ -1,85 +1,45 @@
-# 07. XOR of Numbers in a Given Range
+## XOR of Numbers in the Given Range
 
-## 🧩 Problem Statement
+### Description
+In this program, I found the XOR value of all numbers in a given range from L to R.
 
-Given two integers `L` and `R`, find the XOR of all numbers in the range `[L, R]`.
+### Concept
+Normally, to find XOR from L to R, we can calculate:
 
-## 📌 Example
+L ^ (L+1) ^ (L+2) ... ^ R
 
-**Input:**
+But this takes more time for large numbers.
 
-```
-L = 3, R = 5
-```
+So, I used a pattern in XOR values.
 
-**Output:**
+For numbers from 1 to n:
 
-```
-2
-```
+- If n % 4 == 0, XOR value is n
+- If n % 4 == 1, XOR value is 1
+- If n % 4 == 2, XOR value is n + 1
+- If n % 4 == 3, XOR value is 0
 
-**Explanation:**
+Using this pattern, XOR in range L to R can be found by:
 
-```
+`XOR(1 to R) ^ XOR(1 to L-1)`
+
+### Program Explanation
+The program first finds XOR from 1 to R.
+
+Then it finds XOR from 1 to L-1.
+
+After that, XOR operation is performed on both values.
+
+This gives XOR of numbers in the range L to R.
+
+For example, if L = 3 and R = 5:
+
 3 ^ 4 ^ 5 = 2
-```
 
-## 💡 Approach
+So the output is 2.
 
-A direct approach is to XOR all numbers from `L` to `R`, but this can be inefficient for large ranges.
+### Output
+2
 
-An optimized approach uses properties of XOR:
-
-### Key Idea:
-
-* XOR of range `[L, R]` can be written as:
-
-  `XOR(L..R) = XOR(1..R) ^ XOR(1..L-1)`
-
-* There is a repeating pattern for `XOR(1..n)` based on `n % 4`
-
-
-## 🔁 Pattern for XOR(1 to n)
-
-| n % 4 | XOR(1..n) |
-| ----- | --------- |
-| 0     | n         |
-| 1     | 1         |
-| 2     | n + 1     |
-| 3     | 0         |
-
-## ⚙️ Algorithm
-
-1. Define a function to compute XOR from `1` to `n` using the pattern
-2. Compute:
-
-   * `XOR(1..R)`
-   * `XOR(1..L-1)`
-3. Take XOR of both results
-4. The result gives XOR of range `[L, R]`
-
-## ⏱️ Complexity Analysis
-
-* **Time Complexity:** O(1)
-  (Using pattern-based calculation)
-
-* **Space Complexity:** O(1)
-
-## 🚀 Key Points
-
-* Much faster than iterating through the range
-* Uses mathematical pattern in XOR
-* Important for optimization in interviews
-* Common bit manipulation problem
-
-## 🏷️ Tags
-
-* Bit Manipulation
-* XOR
-* Mathematical Pattern
-* Optimization
-
-## 🔗 Practice Reference
-
-* LeetCode (similar problems)
-* Bit Manipulation concepts
+### Conclusion
+By using XOR pattern, we can find range XOR in an easy and faster way.
