@@ -1,86 +1,54 @@
-# 08. XOR Queries of a Subarray
+## XOR Queries of a Subarray
 
-## 🔗 Practice Link
-
+### Practice Link
 https://leetcode.com/problems/xor-queries-of-a-subarray/
 
-## 🧩 Problem Statement
+### Description
+In this program, I found the XOR of elements between the given left and right positions for each query in the array.
 
-You are given an array `arr` of positive integers and a list of queries.
-Each query contains two indices `[left, right]`.
+### Concept
+To solve this problem efficiently, I used Prefix XOR.
 
-For each query, compute the XOR of elements from index `left` to `right`:
+Prefix XOR means storing XOR values from starting index up to current index.
 
-`arr[left] XOR arr[left+1] XOR ... XOR arr[right]`
+For example, if array is [1,3,4,8]:
 
-Return the result for all queries.
+- prefix[0] = 1
+- prefix[1] = 1 ^ 3 = 2
+- prefix[2] = 1 ^ 3 ^ 4 = 6
+- prefix[3] = 1 ^ 3 ^ 4 ^ 8 = 14
 
-## 📌 Example
+By using prefix XOR, we can find XOR of any range quickly.
 
-**Input:**
+Formula:
 
-```
-arr = [1, 3, 4, 8]
-queries = [[0,1], [1,2], [0,3], [3,3]]
-```
+If L = 0 → answer = prefix[R]
 
-**Output:**
+If L > 0 → answer = prefix[R] ^ prefix[L-1]
 
-```
-[2, 7, 14, 8]
-```
+### Program Explanation
+The program first creates a prefix XOR array.
 
-## 📖 Explanation
+Each position stores XOR of all elements from beginning up to that position.
 
-* [0,1] → 1 XOR 3 = 2
-* [1,2] → 3 XOR 4 = 7
-* [0,3] → 1 XOR 3 XOR 4 XOR 8 = 14
-* [3,3] → 8
+After creating prefix array, each query is processed.
 
-## 💡 Approach
+If left index is 0, result is directly taken from prefix[right].
 
-### 🔹 Brute Force
+Otherwise, XOR is calculated using:
 
-* For each query, iterate from `left` to `right`
-* Compute XOR manually
+`prefix[R] ^ prefix[L-1]`
 
-### 🔹 Optimized Approach (Prefix XOR)
+This gives XOR of elements between left and right.
 
-* Use prefix XOR array to store cumulative XOR values
-* This allows answering each query in constant time
+For example, for query [1,2]:
 
-## ⚙️ Algorithm (Optimized)
+3 ^ 4 = 7
 
-1. Create a prefix XOR array:
+So output is 7.
 
-   * `prefix[i] = arr[0] ^ arr[1] ^ ... ^ arr[i]`
-2. For each query `[L, R]`:
+### Output
+[2,7,14,8]
 
-   * If `L == 0` → answer = `prefix[R]`
-   * Else → answer = `prefix[R] ^ prefix[L-1]`
-
-## ⏱️ Complexity Analysis
-
-### Brute Force:
-
-* Time Complexity: O(n * q)
-* Space Complexity: O(1)
-
-### Optimized:
-
-* Time Complexity: O(n + q)
-* Space Complexity: O(n)
-
-## 🚀 Key Points
-
-* XOR operation is associative and commutative
-* Prefix XOR helps reduce repeated calculations
-* Efficient for handling multiple queries
-* Common problem in bit manipulation and arrays
-
-## 🏷️ Tags
-
-* Bit Manipulation
-* Prefix XOR
-* Arrays
-* Range Queries
+### Conclusion
+By using Prefix XOR, range XOR queries can be solved in a simple and faster way.
