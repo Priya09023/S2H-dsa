@@ -1,91 +1,49 @@
-# 09. Find Two Numbers Appearing Once
+## Find the Two Numbers Appearing Odd Number of Times
 
-## 🔗 Practice Link
-
+### Practice Link
 https://leetcode.com/problems/single-number-iii/
 
-## 🧩 Problem Statement
 
-Given an array `nums` of integers, every element appears exactly twice except for two elements.
-Your task is to find the two elements that appear only once.
+### Description
+In this program, I found the two numbers that appear only one time in the array, while all other numbers appear twice.
 
-Return the result in **ascending order**.
+### Concept
+To solve this problem, I used XOR operation.
 
+When same numbers are XORed, the result becomes 0.
 
-## 📌 Example
+For example:
 
-**Input:**
+- `a ^ a = 0`
+- `a ^ 0 = a`
 
-```id="x7b2lm"
-nums = [1, 2, 1, 3, 5, 2]
-```
+Because of this, duplicate numbers cancel each other.
 
-**Output:**
+When all elements are XORed, the result will be XOR of the two single numbers.
 
-```id="q1m8sn"
-[3, 5]
-```
+Then I found the rightmost set bit to separate these two numbers into different groups.
 
+After dividing into two groups, XOR is performed again in each group to get the two required numbers.
 
-## 📖 Explanation
+### Program Explanation
+The program first performs XOR on all elements in the array.
 
-* Elements `1` and `2` appear twice and cancel out
-* Elements `3` and `5` appear only once
-* Final answer in ascending order → `[3, 5]`
+This removes all duplicate numbers and leaves XOR of the two single numbers.
 
+Then the rightmost set bit is found.
 
-## 💡 Approach
+Using this bit, numbers are divided into two groups.
 
-This problem can be solved efficiently using **Bit Manipulation (XOR)**.
+One group contains numbers with that bit as 0, and another group contains numbers with that bit as 1.
 
-### Key Idea:
+Then XOR is performed separately in both groups.
 
-* XOR of all elements gives `xor = x ^ y`
-  (where `x` and `y` are the two unique numbers)
+At the end, the two single numbers remain.
 
-* Find a set bit (difference) between `x` and `y`
+For example, in array [1,2,1,3,5,2], the numbers 3 and 5 appear only one time, so output is [3,5].
 
-* Use this bit to divide elements into two groups
+### Output
+[3,5]
 
-* XOR each group separately to get the two numbers
-
-
-## ⚙️ Algorithm
-
-1. XOR all elements → get `xor = x ^ y`
-2. Find the rightmost set bit:
-
-   * `diffBit = xor & (-xor)`
-3. Divide elements into two groups:
-
-   * Group 1: bit not set
-   * Group 2: bit set
-4. XOR elements in each group:
-
-   * Get `x` and `y`
-5. Sort the result in ascending order
-
-
-## ⏱️ Complexity Analysis
-
-* **Time Complexity:** O(n)
-  (Single traversal of array)
-
-* **Space Complexity:** O(1)
-  (No extra space used)
-
-
-## 🚀 Key Points
-
-* Uses XOR properties to eliminate duplicates
-* Efficient and optimal solution
-* No need for extra data structures
-* Important interview problem
-
-
-## 🏷️ Tags
-
-* Bit Manipulation
-* XOR
-* Arrays
-* Interview Questions
+### Conclusion
+By using XOR operation, we can find the two single numbers in a simple and efficient way without using extra space.
