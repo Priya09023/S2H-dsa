@@ -1,85 +1,54 @@
-# 10. Power Set (Subsets)
+## Power Set
 
-## 🔗 Practice Link
-
+### Practice Link
 https://leetcode.com/problems/subsets/
 
-## 🧩 Problem Statement
+### Description
+In this program, I generated all possible subsets of a given array. A power set means the collection of all subsets, including empty set and full set.
 
-Given an array `nums` of **unique integers**, return all possible subsets (the power set).
+### Concept
+For an array with n elements, total number of subsets will be `2^n`.
 
-The solution set must not contain duplicate subsets.
+For example, if array is [1,2,3]:
 
+Total subsets = `2^3 = 8`
 
-## 📌 Example
+Subsets are:
 
-**Input:**
+- []
+- [1]
+- [2]
+- [1,2]
+- [3]
+- [1,3]
+- [2,3]
+- [1,2,3]
 
-```id="k2m9zp"
-nums = [1, 2, 3]
-```
+To generate these subsets, I used bit manipulation.
 
-**Output:**
+Each number from 0 to `2^n - 1` represents one subset in binary form.
 
-```id="x4t8qw"
-[[], [1], [2], [1,2], [3], [1,3], [2,3], [1,2,3]]
-```
+If a bit is 1, that element is included in the subset.
 
+If a bit is 0, that element is not included.
 
-## 📖 Explanation
+### Program Explanation
+The program first finds total number of subsets using `1 << n`.
 
-* A subset is any combination of elements from the array
-* For an array of size `n`, total subsets = `2^n`
-* Includes:
+Then it runs a loop from 0 to total subsets - 1.
 
-  * Empty set `[]`
-  * Single elements `[1]`, `[2]`, `[3]`
-  * Combinations `[1,2]`, `[1,3]`, `[2,3]`
-  * Full set `[1,2,3]`
+For each number, its binary form is checked bit by bit.
 
+If a bit is set, the corresponding element is added to the current subset.
 
-## 💡 Approach
+After checking all bits, that subset is added to the final answer.
 
-This problem can be solved using **Bit Manipulation**.
+This process continues until all subsets are generated.
 
-### Key Idea:
+For input [1,2,3], total 8 subsets are generated.
 
-* For an array of size `n`, there are `2^n` possible subsets
-* Each subset can be represented using a binary number from `0` to `2^n - 1`
-* Each bit in the number decides whether to include an element
+### Output
+[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 
-
-## ⚙️ Algorithm
-
-1. Let `n` be the size of the array
-2. Compute total subsets = `2^n`
-3. Loop from `0` to `2^n - 1`
-4. For each number:
-
-   * Check each bit
-   * If bit is set, include the corresponding element
-5. Add the subset to the result
-
-
-## ⏱️ Complexity Analysis
-
-* **Time Complexity:** O(n * 2^n)
-  (Generating all subsets)
-
-* **Space Complexity:** O(2^n)
-  (Storing all subsets)
-
-
-## 🚀 Key Points
-
-* Uses bit manipulation for subset generation
-* Efficient and commonly used technique
-* Helps in solving combination-based problems
-* Important for interviews and competitive programming
-
-## 🏷️ Tags
-
-* Bit Manipulation
-* Backtracking
-* Subsets
-* Combinatorics
+### Conclusion
+By using bit manipulation, generating power set becomes simple and efficient.
