@@ -1,122 +1,49 @@
-🧠 Day 01 – Bit Manipulation
-📌 Topic Details
-Topic: Bit Manipulation
-Number of Questions: 10
-📖 What is Bit Manipulation?
+## Day 01 - Bit Manipulation
 
-Bit manipulation is a technique used to solve problems using binary operations (bits).
+### Topic Details
+Topic Name: Bit Manipulation  
+Number of Problems Solved: 10
 
-It helps in:
+### About the Topic
+Bit Manipulation is used to solve problems by working directly on binary bits (0s and 1s). It is a useful concept in programming because bitwise operations are fast and efficient compared to normal arithmetic operations.
 
-Optimizing performance
-Reducing time complexity
-Solving problems efficiently using low-level operations
+This topic is commonly used in coding problems, interviews, and system level programming.
 
-👉 It is widely used in:
+### Bitwise Operators
+The basic operators used in bit manipulation are:
 
-Competitive Programming
-Technical Interviews
-System-level programming
-⚙️ Bitwise Operators
-🔹 AND (&)
-1 & 1 = 1
-Otherwise → 0
-🔹 OR (|)
-If any bit is 1 → 1
-Both 0 → 0
-🔹 XOR (^)
-Different bits → 1
-Same bits → 0
-✨ Special Rules:
-A ^ A = 0
-A ^ 0 = A
-🔹 NOT (~)
-Inverts all bits
-Formula:
-~A = -(A + 1)
-🔹 Left Shift (<<)
-Shifts bits to the left
-Adds 0 on right
+- AND (`&`) → returns 1 only when both bits are 1
+- OR (`|`) → returns 1 if at least one bit is 1
+- XOR (`^`) → returns 1 when bits are different
+- NOT (`~`) → reverses all bits
+- Left Shift (`<<`) → shifts bits to left
+- Right Shift (`>>`) → shifts bits to right
 
-👉 Rule:
-A << n = A × 2ⁿ
+Some useful XOR properties:
 
-🔹 Right Shift (>>)
-Shifts bits to the right
+- A ^ A = 0
+- A ^ 0 = A
 
-👉 Rule:
-A >> n = A / 2ⁿ
+### Number Representation
+Negative numbers are represented in different ways:
 
-🔢 Negative Number Representation
-1️⃣ Sign-Magnitude
-MSB represents sign
-0 → Positive
-1 → Negative
+- Sign Magnitude
+- One's Complement
+- Two's Complement
 
-❌ Disadvantage:
+Among these, Two's Complement is mostly used in computers because it makes calculations easier and has only one representation for zero.
 
-Two zeros (+0, -0)
-Complex calculations
-2️⃣ One’s Complement
-Flip all bits
+### Problems Covered
+1. Check if a Number is Odd or Even  
+2. Count the Number of Set Bits  
+3. Check if the i-th Bit is Set or Not  
+4. Check if a Number is Power of 2 or Not  
+5. Count Number of Bits to be Flipped to Convert A to B  
+6. Find the Number that Appears Odd Number of Times  
+7. XOR of Numbers in the Given Range  
+8. XOR Queries of a Subarray  
+9. Find the Two Numbers Appearing Odd Number of Times  
+10. Power Set  
 
-❌ Disadvantage:
-
-Still has two zeros
-3️⃣ Two’s Complement (Most Important ⭐)
-
-Steps:
-
-Invert bits
-Add 1
-
-✅ Advantages:
-
-Only one zero
-Easy arithmetic
-Used in modern computers
-📏 Range Formula
-
-For n bits:
-
--2^(n-1) to 2^(n-1) - 1
-🚀 Practice Problems
-✅ 1. Check Odd or Even
-
-Determine whether a number is odd or even using bitwise operation.
-
-✅ 2. Count Set Bits
-
-Count the number of 1s in binary representation.
-
-✅ 3. Check i-th Bit
-
-Check whether a specific bit is set or not.
-
-✅ 4. Power of Two
-
-Check if a number is a power of 2.
-
-✅ 5. Minimum Bit Flips
-
-Find number of bits to flip to convert one number into another.
-
-✅ 6. Single Number
-
-Find the number that appears only once in an array.
-
-✅ 7. XOR in Range
-
-Find XOR of numbers from L to R efficiently.
-
-✅ 8. XOR Queries
-
-Answer multiple XOR range queries using prefix XOR.
-
-✅ 9. Two Single Numbers
-
-Find two numbers that appear only once.
-
-✅ 10. Power Set
-
-Generate all subsets of a given set.
+### Conclusion
+By practicing these problems, I understood how bitwise operations work and how they can be used to solve problems in a simple and efficient way.
