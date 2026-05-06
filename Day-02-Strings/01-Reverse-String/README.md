@@ -1,57 +1,36 @@
-# 🔹 01 - Reverse String
+## Reverse a String
 
-## 🔗 Reference
-
-GeeksforGeeks:
+### Reference
 https://www.geeksforgeeks.org/dsa/reverse-a-string/
 
-## 📌 Problem Statement
+### Description
+In this program, I reversed the given string. Reversing a string means changing the order of characters from last to first.
 
-Given a string `s`, reverse the string.
+### Concept
+A string is made up of characters arranged in order.
 
-Reversing a string means rearranging the characters such that:
+To reverse the string:
 
-* The first character becomes the last
-* The second character becomes the second last
-* And so on
+- first character moves to last position
+- second character moves to second last position
+- last character moves to first position
 
+This way, the complete string becomes reversed.
 
-## 🧾 Examples
+### Program Explanation
+The program takes a string as input.
 
-### Example 1
+Then it starts checking characters from the last position and adds them one by one in reverse order.
 
-**Input:**
-Engineering
+By repeating this process until the first character, the reversed string is formed.
 
-**Output:**
+For example, if input is "Engineering":
+
+Original string: Engineering  
+Reversed string: gnireenignE
+
+### Output
 gnireenignE
 
-
-### Example 2
-
-**Input:**
-abdcfe
-
-**Output:**
-efcdba
-
-
-## 💡 Approach
-
-* Use the **Two Pointer Technique**
-* Initialize two pointers:
-
-  * `i = 0` (start of string)
-  * `j = n - 1` (end of string)
-* Swap characters at positions `i` and `j`
-* Move pointers:
-
-  * `i++`
-  * `j--`
-* Repeat until `i < j`
-
-
-## ⏱ Complexity
-
-* **Time Complexity:** O(n)
-* **Space Complexity:** O(1)
+### Conclusion
+Reversing a string is a basic string operation and helps in understanding string manipulation concepts in programming.
