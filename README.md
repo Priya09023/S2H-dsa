@@ -1,4 +1,4 @@
-## Data Structures and Algorithms Practice Repository
+## Data Structures and Algorithms Practice
 
 ### About
 This repository contains my daily practice of Data Structures and Algorithms problems. I am solving problems regularly to improve my coding skills, problem solving ability, and understanding of different concepts in DSA.
