@@ -1,66 +1,37 @@
-# 03. First Occurrence of Substring
+## Find the First Occurrence in a String
 
-## 🔗 Practice Link
-
+### Practice Link
 https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
 
+### Description
+In this program, I found the index of the first occurrence of a given string (needle) in another string (haystack). If the string is not found, the output is -1.
 
-## 🧩 Problem Statement
+### Concept
+The main idea is to compare the characters of needle with haystack one by one.
 
-Given two strings `haystack` and `needle`, return the index of the first occurrence of `needle` in `haystack`.
+The program checks every possible starting position in haystack and compares it with needle.
 
-If `needle` is not found, return `-1`.
+If all characters match, that position is returned as the answer.
 
+If no match is found, the program returns -1.
 
-## 📌 Example
+### Program Explanation
+The program takes two strings as input: haystack and needle.
 
-**Input:**
-haystack = "sadbutsad"
-needle = "sad"
+It starts checking from index 0 of haystack.
 
-**Output:**
+At each position, characters are compared with needle.
+
+If all characters match, the current index is returned.
+
+If characters do not match, the program moves to the next position and checks again.
+
+For example, if haystack is "sadbutsad" and needle is "sad":
+
+The first match is found at index 0, so output is 0.
+
+### Output
 0
 
-
-**Input:**
-haystack = "leetcode"
-needle = "leeto"
-
-**Output:**
--1
-
-
-## 📖 Explanation
-
-* In the first example, `"sad"` appears at index 0 and 6
-* We return the first occurrence → `0`
-* In the second example, substring is not found → `-1`
-
-
-## 💡 Approach
-
-* Traverse the main string (`haystack`)
-* For each index, compare substring with `needle`
-* If match is found, return index
-* If no match, return `-1`
-
-
-## ⚙️ Algorithm
-
-1. Loop through `haystack` from index `0` to `n - m`
-2. For each position, compare characters with `needle`
-3. If all characters match, return the index
-4. If no match found, return `-1`
-
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(n * m)
-* **Space Complexity:** O(1)
-
-
-## 🚀 Key Points
-
-* Simple substring matching problem
-* Built-in functions can simplify solution
-* Important for understanding pattern matching
+### Conclusion
+By comparing characters step by step, we can find the first occurrence of one string in another string in a simple way.
