@@ -1,71 +1,45 @@
-# 04. Palindrome Check
+## Check if a String is Palindrome
 
-## 🔗 Practice Link
-
+### Practice Link
 https://www.geeksforgeeks.org/dsa/palindrome-string/
 
+### Description
+In this program, I checked whether the given string is palindrome or not.
 
-## 🧩 Problem Statement
+A palindrome is a string that reads the same from left to right and right to left.
 
-Given a string `s`, check whether it is a palindrome or not.
+### Concept
+The main idea is to compare characters from both ends of the string.
 
-Return `1` if it is a palindrome, otherwise return `0`.
+- First character is compared with last character
+- Second character is compared with second last character
 
+If all characters are equal, then the string is palindrome.
 
-## 📌 Example
+If any one character does not match, then it is not palindrome.
 
-**Input:**
-s = "abba"
+### Program Explanation
+The program takes a string as input.
 
-**Output:**
+It uses two positions, one starting from the beginning and another starting from the end.
+
+Characters at both positions are compared one by one.
+
+If characters are same, positions move towards the center.
+
+If any mismatch is found, the program returns 0.
+
+If all characters match, the program returns 1.
+
+For example, if input is "abba":
+
+First and last characters are same.  
+Next characters are also same.
+
+So the string is palindrome.
+
+### Output
 1
 
-
-**Input:**
-s = "abc"
-
-**Output:**
-0
-
-
-## 📖 Explanation
-
-* A palindrome is a string that reads the same forward and backward
-* `"abba"` is same in both directions → palindrome
-* `"abc"` is different → not a palindrome
-
-
-## 💡 Approach
-
-* Use two pointers:
-
-  * One from the start
-  * One from the end
-* Compare characters at both positions
-* If all match → palindrome
-* Else → not a palindrome
-
-
-## ⚙️ Algorithm
-
-1. Initialize two pointers:
-
-   * `left = 0`
-   * `right = length - 1`
-2. Compare characters at both ends
-3. If mismatch found → return 0
-4. Move pointers towards center
-5. If loop completes → return 1
-
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(n)
-* **Space Complexity:** O(1)
-
-
-## 🚀 Key Points
-
-* Two pointer technique is efficient
-* No extra space required
-* Common interview problem
+### Conclusion
+By comparing characters from both ends, we can easily check whether a string is palindrome or not.
