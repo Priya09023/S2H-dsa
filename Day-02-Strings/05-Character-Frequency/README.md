@@ -1,55 +1,35 @@
-# 05. Character Frequency in a String
+## Frequency of a Character in a String
 
-
-## 🔗 Practice Link
-
+### Practice Link
 https://www.geeksforgeeks.org/dsa/frequency-of-a-character-in-a-string/
 
+### Description
+In this program, I found how many times a given character appears in a string.
 
-## 🧩 Problem Statement
+### Concept
+The main idea is to check each character in the string one by one.
 
-Given a string `s` and a character `ch`, find the frequency of that character in the string.
+If the current character matches the given character, the count is increased.
 
+After checking the complete string, the final count gives the frequency of that character.
 
-## 📌 Example
+### Program Explanation
+The program takes a string and a character as input.
 
-**Input:**
-s = "Aditya university"
-Character = 'i'
+It starts checking each character from beginning to end.
 
-**Output:**
-3
+Whenever the given character is found, count is increased by 1.
 
+This process continues until all characters in the string are checked.
 
-## 📖 Explanation
+For example, if the string is "Aditya university" and the character is 'i':
 
-* Count how many times the given character appears in the string
-* In the example, character `'i'` appears 3 times
+The character 'i' appears 3 times.
 
+So the output is 3.
 
-## 💡 Approach
+### Output
+Frequency of character 'i' is 3
 
-* Traverse the string character by character
-* Compare each character with the given character
-* Increase count whenever a match is found
-
-
-## ⚙️ Algorithm
-
-1. Initialize count = 0
-2. Loop through the string
-3. If current character == given character → increment count
-4. After loop ends, return count
-
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(n)
-* **Space Complexity:** O(1)
-
-
-## 🚀 Key Points
-
-* Simple string traversal problem
-* Case-sensitive comparison
-* No extra data structures required
+### Conclusion
+By checking each character in the string, we can easily find the frequency of a given character.
