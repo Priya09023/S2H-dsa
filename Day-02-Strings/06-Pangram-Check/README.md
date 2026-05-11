@@ -1,66 +1,41 @@
-# 06. Pangram Check
+## Check if a String is Pangram or Not
 
-## 🔗 Practice Link
-
+### Practice Link
 https://www.geeksforgeeks.org/dsa/pangram-checking/
 
+### Description
+In this program, I checked whether the given string is a pangram or not.
 
-## 🧩 Problem Statement
+A pangram is a sentence that contains all letters from 'a' to 'z' at least one time.
 
-Given a string `s`, check whether it is a Pangram or not.
+### Concept
+The main idea is to check whether every alphabet letter is present in the string.
 
-A Pangram is a sentence that contains all letters of the English alphabet (a–z).
+The program checks all characters one by one and marks the letters that are present.
 
+If all 26 letters are found, then the string is a pangram.
 
-## 📌 Example
+If any letter is missing, then it is not a pangram.
 
-**Input:**
-s = "The quick brown fox jumps over the lazy dog"
+### Program Explanation
+The program takes a string as input.
 
-**Output:**
+It converts all characters into lowercase so that both uppercase and lowercase letters can be handled easily.
+
+Then each character is checked.
+
+If the character is an alphabet letter, it is marked as present.
+
+After checking the complete string, the program verifies whether all 26 letters are present or not.
+
+For example, in the sentence:
+
+"The quick brown fox jumps over the lazy dog"
+
+all letters from 'a' to 'z' are present, so the output is true.
+
+### Output
 true
 
-
-**Input:**
-s = "The quick brown fox jumps over the dog"
-
-**Output:**
-false
-
-
-## 📖 Explanation
-
-* A Pangram must contain all 26 letters from 'a' to 'z'
-* First example contains all letters → true
-* Second example is missing some letters → false
-
-
-## 💡 Approach
-
-* Create an array or set to track characters
-* Traverse the string
-* Mark each alphabet character as visited
-* Check if all 26 characters are present
-
-
-## ⚙️ Algorithm
-
-1. Initialize a frequency array of size 26
-2. Traverse the string
-3. Convert each character to lowercase
-4. If character is alphabet → mark it
-5. Check if all 26 letters are marked
-6. If yes → return true, else false
-
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(n)
-* **Space Complexity:** O(1)
-
-
-## 🚀 Key Points
-
-* Case-insensitive problem
-* Ignore spaces and special characters
-* Uses basic hashing concept
+### Conclusion
+By checking all alphabet letters in the string, we can easily determine whether the given string is a pangram or not.
