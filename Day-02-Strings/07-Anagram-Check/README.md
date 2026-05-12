@@ -1,79 +1,47 @@
-# 07. Anagram Check
+## Check if Two Strings are Anagrams
 
-## 🔗 Practice Link
-
+### Practice Link
 https://www.geeksforgeeks.org/dsa/check-whether-two-strings-are-anagram-of-each-other/
 
+### Description
+In this program, I checked whether two given strings are anagrams or not.
 
-## 🧩 Problem Statement
+Two strings are called anagrams if they contain the same characters with the same frequency.
 
-Given two strings `s1` and `s2`, check whether they are anagrams of each other.
+### Concept
+The main idea is to compare the characters present in both strings.
 
-Two strings are anagrams if they contain the same characters with the same frequency.
+If both strings have:
 
+- same characters
+- same number of occurrences for each character
 
-## 📌 Example
+then they are anagrams.
 
-**Input:**
-s1 = "lemon"
+If any character is missing or frequency is different, then they are not anagrams.
+
+### Program Explanation
+The program takes two strings as input.
+
+First, it checks whether both strings have same length or not.
+
+If lengths are different, the strings cannot be anagrams.
+
+Then characters in both strings are counted and compared.
+
+If all character frequencies are equal, the program returns true.
+
+Otherwise, it returns false.
+
+For example:
+
+s1 = "lemon"  
 s2 = "melon"
 
-**Output:**
+Both strings contain same characters with same frequency, so output is true.
+
+### Output
 true
 
-
-**Input:**
-s1 = "allergy"
-s2 = "allergyy"
-
-**Output:**
-false
-
-
-**Input:**
-s1 = "listen"
-s2 = "lists"
-
-**Output:**
-false
-
-
-## 📖 Explanation
-
-* Anagrams must have:
-
-  * Same characters
-  * Same frequency of each character
-* If any character count differs → not an anagram
-
-
-## 💡 Approach
-
-* Use a frequency array of size 26
-* Increase count for first string
-* Decrease count for second string
-* If all values are zero → anagram
-
-
-## ⚙️ Algorithm
-
-1. Initialize frequency array of size 26
-2. Traverse first string → increment count
-3. Traverse second string → decrement count
-4. Check all values:
-
-   * If all are zero → true
-   * Else → false
-
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(n)
-* **Space Complexity:** O(1)
-
-
-## 🚀 Key Points
-
-* Efficient method using hashing
-* Avoid sorting for better performance
-* Common interview question
+### Conclusion
+By comparing character frequencies, we can easily check whether two strings are anagrams or not.
