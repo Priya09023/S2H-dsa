@@ -1,86 +1,49 @@
-# 10. Isomorphic Strings
+## Isomorphic Strings Check
 
-## 🔗 Practice Link
-
+### Practice Link
 https://www.geeksforgeeks.org/dsa/check-if-two-given-strings-are-isomorphic-to-each-other/
 
+### Description
+In this program, I checked whether two given strings are isomorphic or not.
 
-## 🧩 Problem Statement
+Two strings are called isomorphic if characters in one string can be mapped consistently to characters in another string.
 
-Given two strings `s1` and `s2`, determine whether they are isomorphic.
+### Concept
+The main idea is to create a mapping between characters of both strings.
 
-Two strings are isomorphic if characters in `s1` can be replaced to get `s2` with a consistent and unique mapping.
+- One character should map to only one character.
+- Different characters should not map to the same character.
+- The mapping should remain same throughout the string.
 
+If all mappings follow these conditions, then the strings are isomorphic.
 
+### Program Explanation
+The program takes two strings as input.
 
-## 📌 Example
+First, it checks whether both strings have same length or not.
 
-**Input:**
-s1 = "aab"
+Then characters of both strings are checked one by one.
+
+A mapping is created between characters of the first string and second string.
+
+If the same character maps to different characters, or different characters map to the same character, the program returns false.
+
+Otherwise, the strings are isomorphic.
+
+For example:
+
+s1 = "aab"  
 s2 = "xxy"
 
-**Output:**
+Here:
+
+- a → x
+- b → y
+
+The mapping is consistent, so output is true.
+
+### Output
 true
 
-
-
-**Input:**
-s1 = "aab"
-s2 = "xyz"
-
-**Output:**
-false
-
-
-
-**Input:**
-s1 = "abc"
-s2 = "xxz"
-
-**Output:**
-false
-
-
-
-## 📖 Explanation
-
-* Each character in `s1` must map to a unique character in `s2`
-* Mapping should be consistent throughout
-* No two characters in `s1` should map to the same character in `s2`
-
-
-
-## 💡 Approach
-
-* Use two mappings:
-
-  * `s1 → s2`
-  * `s2 → s1`
-* Traverse both strings together
-* Check mapping consistency
-
-
-
-## ⚙️ Algorithm
-
-1. Initialize two mapping arrays/maps
-2. Traverse both strings
-3. If mapping does not exist → create mapping
-4. If mapping exists → check consistency
-5. If mismatch found → return false
-6. If all checks pass → return true
-
-
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(n)
-* **Space Complexity:** O(1)
-
-
-
-## 🚀 Key Points
-
-* Requires bidirectional mapping
-* Important hashing problem
-* Common interview question
+### Conclusion
+By maintaining proper character mapping, we can easily check whether two strings are isomorphic or not.
