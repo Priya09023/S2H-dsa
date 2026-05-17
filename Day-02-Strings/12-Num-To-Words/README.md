@@ -1,83 +1,46 @@
-# 12. Number to Words
+## Convert a Number to Words
 
-
-## 🔗 Practice Link
-
+### Practice Link
 https://www.geeksforgeeks.org/dsa/program-to-convert-a-given-number-to-words-set-2/
 
+### Description
+In this program, I converted a given number into words.
 
-## 🧩 Problem Statement
+The program prints the number in readable word format instead of numeric form.
 
-Convert a given number into its word representation.
+### Concept
+The main idea is to divide the number into parts like:
 
+- crore
+- lakh
+- thousand
+- hundred
 
+Then each part is converted into words separately.
 
-## 📌 Example
+Special words are used for numbers from 1 to 19, and different words are used for tens like twenty, thirty, forty, etc.
 
-**Input:**
-438237764
+### Program Explanation
+The program takes a number as input.
 
-**Output:**
-forty three crore eighty two lakh thirty seven thousand seven hundred sixty four
+It checks each digit group step by step.
 
+First, the crore part is processed, then lakh, thousand, hundred, and remaining digits.
 
+Each part is converted into words using predefined word arrays.
 
-**Input:**
-999999
+Finally, all words are combined to form the complete result.
 
-**Output:**
-nine lakh ninety nine thousand nine hundred ninety nine
+For example:
 
+Input: 1000
 
+1000 is converted into:
 
-**Input:**
-1000
+"one thousand"
 
-**Output:**
+### Output
 one thousand
 
-
-
-## 📖 Explanation
-
-* Break the number into parts:
-
-  * Crore
-  * Lakh
-  * Thousand
-  * Hundreds
-* Convert each part into words
-
-
-
-## 💡 Approach
-
-* Divide number into segments
-* Convert each segment separately
-* Combine results in correct order
-
-
-
-## ⚙️ Algorithm
-
-1. Handle crore part
-2. Handle lakh part
-3. Handle thousand part
-4. Handle remaining number
-5. Convert each part using helper function
-6. Combine results
-
-
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(1)
-* **Space Complexity:** O(1)
-
-
-
-## 🚀 Key Points
-
-* Uses Indian numbering system
-* Break problem into smaller parts
-* String building technique
+### Conclusion
+By dividing the number into smaller parts and converting each part separately, large numbers can be represented easily in word format.
