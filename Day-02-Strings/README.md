@@ -1,105 +1,39 @@
-# Day-02: Strings
+## Day 02 - Strings
 
-## 📖 Introduction
+### Topic Details
+Topic Name: Strings  
+Number of Problems Solved: 12
 
-A **String** is a sequence of characters used to represent text.
-It is one of the most commonly used data types in programming and plays a key role in solving real-world problems like text processing, searching, and data validation.
+### About the Topic
+Strings are used to store characters and text in programming. String problems are important because they help in improving logic building and problem solving skills.
 
-## 🔑 Core Concepts
+This topic is commonly used in coding problems, interviews, and text processing applications.
 
-* **Traversal** → Access characters using loops
-* **Two Pointer Technique** → Used for reverse and palindrome
-* **Hashing (Frequency Count)** → Used for counting characters
-* **Mapping** → Used in isomorphic problems
-* **String Manipulation** → Replace, sort, modify
-* **Simulation** → Used in large number addition
+### String Concepts
+Some important concepts used in string problems are:
 
-## 📚 Practice Problems
+- String Traversal
+- Character Comparison
+- Two Pointer Technique
+- Character Frequency Count
+- String Manipulation
+- Mapping and Hashing
 
-### 1. Reverse a String
+These concepts help in solving string problems in a simple and efficient way.
 
-**Example:** `"abc"` → `"cba"`
+### Problems Covered
+- Reverse a String
+- Length of Last Word
+- Find the First Occurrence in a String
+- Check if a String is Palindrome
+- Frequency of a Character in a String
+- Check if a String is Pangram or Not
+- Check if Two Strings are Anagrams
+- Replace All Occurrences of a Substring
+- Sort a String in Alphabetical Order
+- Isomorphic Strings Check
+- Sum of Two Large Numbers as Strings
+- Convert a Number to Words
 
-
-### 2. Length of Last Word
-
-**Example:** `"Hello World"` → `5`
-
-
-### 3. First Occurrence of Substring
-
-**Example:** `"sadbutsad", "sad"` → `0`
-
-
-### 4. Palindrome Check
-
-**Example:** `"abba"` → Palindrome
-
-
-### 5. Character Frequency
-
-**Example:** `"aditya", 'a'` → `2`
-
-
-### 6. Pangram Check
-
-**Example:** `"The quick brown fox jumps over the lazy dog"` → True
-
-
-### 7. Anagram Check
-
-**Example:** `"listen", "silent"` → True
-
-
-### 8. Replace Substring
-
-**Example:** `"abab", "ab" → "x"` → `"xx"`
-
-
-### 9. Sort a String
-
-**Example:** `"dcba"` → `"abcd"`
-
-
-### 10. Isomorphic Strings
-
-**Example:** `"aab", "xxy"` → True
-
-
-### 11. Sum of Large Numbers
-
-**Example:** `"123", "77"` → `"200"`
-
-
-### 12. Number to Words
-
-**Example:** `123` → `"one hundred twenty three"`
-
-
-## ⚙️ Approach Strategy
-
-1. Understand the problem
-2. Start with a simple approach
-3. Optimize using:
-
-   * Two pointers
-   * Hashing
-   * Mapping
-4. Handle edge cases (empty string, spaces, etc.)
-
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(n) for most problems
-* **Space Complexity:** O(1) or O(n)
-
-
-🔗 Practice Links
-	GeeksforGeeks (String Problems)
-	LeetCode (String Problems)
-
-
-## 🎯 Conclusion
-
-Strings are one of the most important topics in programming.
-Practicing these problems will help you improve your logic and perform better in coding interviews.
+### Conclusion
+By practicing these problems, I improved my understanding of string operations and different problem solving techniques used in programming.
