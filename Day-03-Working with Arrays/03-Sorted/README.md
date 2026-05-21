@@ -1,76 +1,39 @@
-# 03. Check if Array is Sorted
+## Check if an Array is Sorted
 
-## 🔗 Practice Link
-
+### Practice Link
 https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/
 
+### Description
+In this program, I checked whether the given array is sorted in ascending order or not.
 
-## 🧩 Problem Statement
+If all elements are arranged in increasing or non-decreasing order, the array is considered sorted.
 
-Given an array of size n, check whether the array is sorted in **ascending (non-decreasing) order** or not.
+### Concept
+The main idea is to compare adjacent elements in the array.
 
-Return:
+If every element is smaller than or equal to the next element, then the array is sorted.
 
-* **true** → if sorted
-* **false** → if not sorted
+If any element is greater than the next element, then the array is not sorted.
 
+### Program Explanation
+The program takes array elements as input.
 
+It starts checking elements from the beginning of the array.
 
-## 📌 Example
+Each element is compared with the next element.
 
-**Input:**
-5
-1 2 3 4 5
+If any element is greater than the next element, the program returns False.
 
-**Output:**
-true
+If all comparisons are correct, the program returns True.
 
+For example:
 
+Array = [1,2,3,4,5]
 
-**Input:**
-5
-5 4 6 7 8
+All elements are in increasing order, so output is True.
 
-**Output:**
-false
+### Output
+True
 
-
-
-## 📖 Explanation
-
-* Compare each element with the previous one
-* If any element is smaller than the previous element → array is not sorted
-* Otherwise, the array is sorted
-
-
-
-## 💡 Approach
-
-* Traverse the array from index 1
-* Compare current element with previous element
-* If condition fails → return false
-* If loop completes → return true
-
-
-
-## ⚙️ Algorithm
-
-1. Read array size and elements
-2. Traverse from index 1 to n-1
-3. If arr[i] < arr[i-1] → return false
-4. If no violation → return true
-
-
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(n)
-* **Space Complexity:** O(1)
-
-
-
-## 🚀 Key Points
-
-* Simple comparison problem
-* No extra space required
-* Important for understanding sorting concepts
+### Conclusion
+By comparing adjacent elements in the array, we can easily determine whether the array is sorted or not.
