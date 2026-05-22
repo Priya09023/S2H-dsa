@@ -1,76 +1,43 @@
-# 04. Remove Duplicates from Sorted Array
+## Remove Duplicates from Sorted Array
 
-## 🔗 Practice Link
-
+### Practice Link
 https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
+### Description
+In this program, I removed duplicate elements from a sorted array and kept only unique elements.
 
-## 🧩 Problem Statement
+The order of elements remains the same after removing duplicates.
 
-Given a sorted array, remove duplicates in-place such that each unique element appears only once.
+### Concept
+Since the array is already sorted, duplicate elements appear next to each other.
 
-The first k elements should contain unique values, and the remaining positions can be ignored.
+The main idea is to compare the current element with the previous unique element.
 
+If the element is different, it is placed in the next unique position.
 
+### Program Explanation
+The program takes a sorted array as input.
 
-## 📌 Example
+One position is used to store unique elements.
 
-**Input:**
-1 1 2 2 2 3 3
+The array is traversed from beginning to end.
 
-**Output:**
-1 2 3 _ _ _ _
+Whenever a new unique element is found, it is placed at the next position.
 
+Duplicate elements are skipped.
 
+At the end, the first part of the array contains only unique elements.
 
-**Input:**
-1 1 1 2 2 3 3 3 3 4 4
+For example:
 
-**Output:**
-1 2 3 4 _ _ _ _ _ _ _
+Array = [1,1,2,2,2,3,3]
 
+After removing duplicates:
 
+[1,2,3]
 
-## 📖 Explanation
+### Output
+[1,2,3,_,_,_,_]
 
-* Since the array is sorted, duplicates appear together
-* We overwrite duplicate elements using a pointer
-* Only unique elements are kept in the front
-
-
-
-## 💡 Approach
-
-* Use two pointers:
-
-  * One for tracking unique position
-  * One for traversal
-* When a new unique element is found, place it at correct position
-
-
-
-## ⚙️ Algorithm
-
-1. Initialize k = 1
-2. Traverse array from index 1
-3. If current element ≠ previous unique element:
-
-   * Place it at index k
-   * Increment k
-4. Print first k elements
-5. Fill remaining with "_"
-
-
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(n)
-* **Space Complexity:** O(1)
-
-
-
-## 🚀 Key Points
-
-* Uses two-pointer technique
-* Works only for sorted arrays
-* Very important interview question
+### Conclusion
+By comparing adjacent elements in the sorted array, duplicates can be removed easily without using extra space.
