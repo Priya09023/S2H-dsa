@@ -1,78 +1,48 @@
-# 06. Rotate Array by K Elements
+## Rotate Array by K Elements
 
-
-## 🔗 Practice Link
-
+### Practice Link
 https://leetcode.com/problems/rotate-array/description/
 
+### Description
+In this program, I rotated the elements of an array by k positions either towards the left or right.
 
-## 🧩 Problem Statement
+Rotation changes the positions of elements while maintaining their order.
 
-Given an array, rotate it by k positions either to the left or right.
+### Concept
+The main idea is to move array elements by k positions.
 
+- In left rotation, elements move towards the beginning of the array.
+- In right rotation, elements move towards the end of the array.
 
+The elements that move out from one side are placed back on the opposite side.
 
-## 📌 Example
+### Program Explanation
+The program takes an array, value of k, and rotation direction as input.
 
-**Input:**
-1 2 3 4 5 6 7
-k = 2 (right)
+For right rotation:
 
-**Output:**
-6 7 1 2 3 4 5
+- Last k elements move to the front.
+- Remaining elements shift towards the right.
 
+For left rotation:
 
+- First k elements move to the end.
+- Remaining elements shift towards the left.
 
-**Input:**
-1 2 3 4 5 6
-k = 2 (left)
+The value of k is adjusted using array size to avoid extra rotations.
 
-**Output:**
-3 4 5 6 1 2
+For example:
 
+Array = [1,2,3,4,5,6,7]  
+k = 2  
+Direction = right
 
+After rotation:
 
-## 📖 Explanation
+[6,7,1,2,3,4,5]
 
-* Left rotation moves elements to the front
-* Right rotation moves elements to the end
-* Rotation wraps around the array
+### Output
+[6,7,1,2,3,4,5]
 
-
-
-## 💡 Approach
-
-* Use reversal technique
-* Reverse entire array
-* Reverse parts based on rotation type
-
-
-
-## ⚙️ Algorithm
-
-### For Right Rotation:
-
-1. Reverse entire array
-2. Reverse first k elements
-3. Reverse remaining elements
-
-### For Left Rotation:
-
-1. Reverse first k elements
-2. Reverse remaining elements
-3. Reverse entire array
-
-
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(n)
-* **Space Complexity:** O(1)
-
-
-
-## 🚀 Key Points
-
-* Efficient in-place solution
-* Avoids extra space
-* Important for interview problems
+### Conclusion
+By shifting elements properly, an array can be rotated left or right by k positions in an efficient way.
