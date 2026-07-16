@@ -1,63 +1,52 @@
-# 07. Move Zeros to End
+## Move Zeros to End
 
-## 🔗 Practice Link
-
+### Practice Link
 https://leetcode.com/problems/move-zeroes/description/
 
+### Description
 
-## 🧩 Problem Statement
+In this program, I moved all the zeros in the array to the end while keeping the order of the remaining elements the same.
 
-Given an array, move all zeros to the end while maintaining the relative order of non-zero elements.
+The array is modified without using any extra array.
 
+### Concept
 
+The main idea is to move all non-zero elements to the front.
 
-## 📌 Example
+While traversing the array:
 
-**Input:**
-1 0 2 3 0 4 0 1
+- If the element is non-zero, place it in the next available position.
+- Zeros automatically remain at the end after all non-zero elements are shifted.
 
-**Output:**
-1 2 3 4 1 0 0 0
+This maintains the original order of non-zero elements.
 
+### Program Explanation
 
+The program takes an integer array as input.
 
-## 📖 Explanation
+It starts traversing the array from the beginning.
 
-* Non-zero elements should remain in the same order
-* All zeros should be shifted to the end
+Whenever a non-zero element is found:
 
+- It is swapped with the element at the current position of the non-zero pointer.
+- The pointer is moved to the next position.
 
+Zero elements are skipped during traversal.
 
-## 💡 Approach
+After completing the traversal, all non-zero elements are placed at the front and all zeros are moved to the end.
 
-* Use two-pointer technique
-* One pointer tracks position for non-zero elements
-* Swap elements when a non-zero is found
+For example:
 
+Array = [1,0,2,3,0,4,0,1]
 
+After moving zeros:
 
-## ⚙️ Algorithm
+[1,2,3,4,1,0,0,0]
 
-1. Initialize pointer j = 0
-2. Traverse the array
-3. If element is non-zero:
+### Output
 
-   * Swap with arr[j]
-   * Increment j
-4. Continue till end
-5. Print array
+[1,2,3,4,1,0,0,0]
 
+### Conclusion
 
-
-## ⏱️ Complexity
-
-* **Time Complexity:** O(n)
-* **Space Complexity:** O(1)
-
-
-
-## 🚀 Key Points
-
-* Maintains order of elements
-* Uses in-place swapping
-* Common interview problem
+By using a simple two-pointer approach, all zeros can be moved to the end while keeping the order of non-zero elements unchanged. This method is efficient and works in linear time without using extra space.
